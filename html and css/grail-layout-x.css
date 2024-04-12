@@ -1,0 +1,70 @@
+/* 经典的圣杯布局和双飞翼布局都是由左中右三列组成，其特点为左右两列宽度固定、中间一列宽度自适应和三列高度固定且相等。其实也是上述两列布局和三列布局的变体，整体的实现原理与上述N列布局一致，可能就是一些细节需注意。
+圣杯布局和双飞翼布局在大体相同下也存在一点不同，区别在于双飞翼布局中间列需插入一个子节点。在常规实现方式里也是在这个中间列里做文章，如何使中间列内容不被左右列遮挡。
+
+相同
+中间列放首位且声明其宽高占满父节点
+被挤出的左右列使用float和margin负值将其拉回与中间列处在同一水平线上
+不同
+圣杯布局：父节点声明padding为左右列留出空位，将左右列固定在空位上
+双飞翼布局：中间列插入子节点并声明margin为左右列让出空位，将左右列固定在空位上 */
+/* .grail-layout-x {
+  padding: 0 100px;
+  width: 400px;
+  height: 400px;
+}
+.left {
+  float: left;
+  margin-left: -100px;
+  width: 100px;
+  height: 100%;
+  background-color: #f66;
+}
+.right {
+  float: right;
+  margin-right: -100px;
+  width: 100px;
+  height: 100%;
+  background-color: #66f;
+}
+.center {
+  height: 100%;
+  background-color: #3c9;
+} */
+/* .grail-layout-y {
+  width: 400px;
+  height: 400px;
+}
+.left {
+  float: left;
+  width: 100px;
+  height: 100%;
+  background-color: #f66;
+}
+.right {
+  float: right;
+  width: 100px;
+  height: 100%;
+  background-color: #66f;
+}
+.center {
+  margin: 0 100px;
+  height: 100%;
+  background-color: #3c9;
+} */
+.grail-layout {
+  display: flex;
+  width: 400px;
+  height: 400px;
+}
+.left {
+  width: 100px;
+  background-color: #f66;
+}
+.center {
+  flex: 1;
+  background-color: #3c9;
+}
+.right {
+  width: 100px;
+  background-color: #66f;
+}

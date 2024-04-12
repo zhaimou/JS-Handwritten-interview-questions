@@ -1,0 +1,33 @@
+/* float + margin-left/right */
+/* .two-column-layout {
+  width: 400px;
+  height: 400px;
+}
+.two-column-layout .left {
+  float: left;
+  width: 100px;
+  height: 100%;
+  background-color: #f66;
+}
+.two-column-layout .right { */
+/* 也可以右列声明overflow:hidden使其形成BFC区域与外界隔离 */
+/* overflow: hidden; */
+/* margin-left: 100px; */
+/* height: 100%; */
+/* background-color: #66f; */
+/* } */
+/* flex */
+.two-column-layout {
+  display: flex;
+  width: 400px;
+  height: 400px;
+}
+.two-column-layout .left {
+  width: 100px;
+  background-color: #f66;
+}
+
+.two-column-layout .right {
+  flex: 1;
+  background-color: blue;
+}

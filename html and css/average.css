@@ -1,0 +1,31 @@
+.one {
+  background-color: #f66;
+}
+
+.two {
+  background-color: #66f;
+}
+
+.three {
+  background-color: #f90;
+}
+
+.four {
+  background-color: #09f;
+}
+
+.average-layout {
+  display: flex;
+  width: 400px;
+  height: 400px;
+}
+
+/* .average-layout div {
+  float: left;
+  width: 25%;
+  height: 100%;
+} */
+
+.average-layout div {
+  flex: 1;
+}

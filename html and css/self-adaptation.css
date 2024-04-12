@@ -1,0 +1,32 @@
+/* 基于UI width=750px DPR=2的网页 */
+/* 自适布局
+自适布局指相对视窗任何尺寸都能占据特定百分比的占位布局。自适布局的容器都是根据视窗尺寸计算，即使父节点或祖先节点的尺寸发生变化也不会影响自适布局的容器尺寸。
+搭建自适布局就离不开视窗比例单位。在CSS3里增加了与viewport相关的四个长度单位，随着时间推移，目前大部分浏览器对这四个长度单位都有较好的兼容性，这也是未来最建议在伸缩方案里使用的长度单位。
+
+1vw表示1%视窗宽度
+1vh表示1%视窗高度
+1vmin表示1%视窗宽度和1%视窗高度里最小者
+1vmax表示1%视窗宽度和1%视窗高度里最大者 */
+
+html {
+  font-size: calc(100vw / 7.5);
+}
+.elem {
+  padding-right: calc(100vw - 100%);
+}
+.modal {
+  display: flex;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  &-wrapper {
+    width: 50vw;
+    height: 200px;
+    background-color: #f66;
+  }
+}

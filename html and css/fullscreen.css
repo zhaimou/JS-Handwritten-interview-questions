@@ -1,0 +1,50 @@
+/* flex */
+/* .fullscreen-layout {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  height: 800px;
+}
+header {
+  height: 50px;
+  background-color: #f66;
+}
+footer {
+  height: 50px;
+  background-color: black;
+}
+main {
+  flex: 1;
+  background-color: blue;
+}
+div {
+  overflow: hidden;
+  height: 100%;
+} */
+.fullscreen-layout {
+  position: relative;
+  width: 400px;
+  height: 400px;
+}
+header,
+footer,
+main {
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+header {
+  top: 0;
+  height: 50px;
+  background-color: #f66;
+}
+footer {
+  bottom: 0;
+  height: 50px;
+  background-color: #66f;
+}
+main {
+  top: 50px;
+  bottom: 50px;
+  background-color: #3c9;
+}

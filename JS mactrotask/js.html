@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=[device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button id="btn">点击</button>
+    <script>
+        let btn = document.querySelector('#btn')
+        btn.addEventListener('click', () => {
+            queueMicrotask(() => {
+                console.log("microtask 1")
+            })
+            console.log('这是点击事件1')
+        })
+
+        btn.addEventListener('click', () => {
+            queueMicrotask(() => {
+                console.log("microtask 2")
+            })
+            console.log('这是点击事件2')
+        })
+        btn.click()
+    </script>
+</body>
+
+</html>
